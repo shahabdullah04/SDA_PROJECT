@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes_controller.loginController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(#FF7878,#d11111);" BorderPane.alignment="CENTER">
+            <children>
+                <Circle fill="#22202000" layoutX="125.0" layoutY="123.0" radius="78.0" stroke="WHITE" strokeType="INSIDE" />
+                <Label layoutX="67.0" layoutY="89.0" text="LifeFlow" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="25.0" />
+                    </font>
+                </Label>
+                <Label layoutX="61.0" layoutY="126.0" prefHeight="18.0" prefWidth="133.0" text="Blood Management System" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="11.0" />
+                    </font>
+                </Label>
+                <Label layoutX="57.0" layoutY="371.0" text="Copyright (c). All Rights Reserved." textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Light" size="10.0" />
+                    </font>
+                </Label>
+                <Button fx:id="signupButton" layoutX="76.0" layoutY="266.0" mnemonicParsing="false" onAction="#signupButtonOnAction" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: linear-gradient(#ffa63f, #f74141); -fx-border-radius: 6px; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Signup" textFill="#a80000">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </Button>
+                <Label layoutX="54.0" layoutY="241.0" text="Don't have an account?" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Bold" size="13.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: snow;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="usernameTextField" layoutX="43.0" layoutY="131.0" prefHeight="25.0" prefWidth="260.0" promptText="someone@example.com" />
+                <Label layoutX="143.0" layoutY="47.0" text="Login" textFill="#a80000">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="25.0" />
+                    </font>
+                </Label>
+                <Label layoutX="44.0" layoutY="172.0" text="Password" textFill="#a80000">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="43.0" layoutY="106.0" text="Username" textFill="#a80000">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="16.0" />
+                    </font>
+                </Label>
+                <PasswordField fx:id="passwordPasswordField" layoutX="44.0" layoutY="200.0" prefHeight="25.0" prefWidth="262.0" promptText="********" />
+                <Button fx:id="loginButton" layoutX="81.0" layoutY="240.0" mnemonicParsing="false" onAction="#loginAdminButtonOnAction" prefHeight="26.0" prefWidth="191.0" style="-fx-background-color: #A80000;" text="Login as Admin" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="closeButton" layoutX="123.0" layoutY="347.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #A80000;" text="Close" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </Button>
+                <Label fx:id="loginLabel" alignment="CENTER" layoutX="86.0" layoutY="83.0" prefHeight="18.0" prefWidth="186.0" textFill="RED">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="12.0" />
+                    </font>
+                </Label>
+                <Button fx:id="loginPatientButton" layoutX="81.0" layoutY="272.0" mnemonicParsing="false" onAction="#loginPatientButtonOnAction" prefHeight="26.0" prefWidth="191.0" style="-fx-background-color: #A80000;" text="Login as Patient" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="loginDonorButton" layoutX="81.0" layoutY="305.0" mnemonicParsing="false" onAction="#loginDonorButtonOnAction" prefHeight="26.0" prefWidth="191.0" style="-fx-background-color: #A80000;" text="Login as Donor" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

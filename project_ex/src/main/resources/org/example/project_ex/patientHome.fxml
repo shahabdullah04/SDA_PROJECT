@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes_controller.patientHomeController">
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="168.0" style="-fx-background-color: linear-gradient(#FF7878,#d11111);" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="welcomeLabel1" alignment="CENTER" layoutX="5.0" layoutY="21.0" prefHeight="24.0" prefWidth="158.0" text="Welcome Patient" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="requestButton" layoutX="15.0" layoutY="149.0" mnemonicParsing="false" onAction="#requestButtonOnAction" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: linear-gradient(#ed6969,#ffe2d1 ); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );;" text="Request Blood" textAlignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="viewRequestButton" layoutX="15.0" layoutY="237.0" mnemonicParsing="false" onAction="#viewRequestButtonOnAction" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: linear-gradient(#ed6969,#ffe2d1 ); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );;" text="View Blood Requests" textAlignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="logoutButton" layoutX="35.0" layoutY="322.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="6.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(#ed6969,#a80000); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Logout" textAlignment="CENTER" textFill="#eeeeee">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </Button>
+                <Line endX="112.19998168945312" endY="-1.52587890625E-5" layoutX="47.0" layoutY="67.0" startX="-34.0" startY="-1.52587890625E-5" stroke="#f2d8d8" />
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <StackPane prefHeight="400.0" prefWidth="511.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane fx:id="RequestBloodAnchor" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="174.0" layoutY="23.0" text="Request Blood" textFill="RED">
+                            <font>
+                                <Font name="Arial Black" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="144.0" layoutY="53.0" text="Select The option according to your need" />
+                        <Line endX="100.0" startX="-100.0" />
+                        <Line endX="204.99993896484375" fill="#ff2e2ed4" layoutX="254.0" layoutY="83.0" startX="-205.39999389648438" stroke="#d45050" />
+                        <Button fx:id="laterButton" alignment="CENTER" layoutX="195.0" layoutY="230.0" mnemonicParsing="false" onAction="#laterButtonOnAction" prefHeight="50.0" prefWidth="117.0" style="-fx-background-color: #ea0017;" text="Later" textFill="WHITE">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="urgentButton" alignment="CENTER" layoutX="195.0" layoutY="149.0" mnemonicParsing="false" onAction="#urgentButtonOnAction" prefHeight="50.0" prefWidth="117.0" style="-fx-background-color: #ea0017;" text="Urgent" textFill="WHITE">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="ScheduleAnchor" prefHeight="400.0" prefWidth="505.0" style="-fx-background-color: snow;" visible="false">
+                    <children>
+                        <Label alignment="CENTER" layoutX="151.0" layoutY="14.0" prefHeight="35.0" prefWidth="190.0" text="Blood Request" textFill="#a80000">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="24.0" />
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="requestDatePicker" layoutX="130.0" layoutY="187.0" prefHeight="26.0" prefWidth="234.0" promptText="01/01/2024" />
+                        <Label alignment="CENTER" layoutX="129.0" layoutY="167.0" text="Select date " textFill="#a80000">
+                            <font>
+                                <Font name="Segoe UI Semilight" size="14.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="confirmButton1" layoutX="176.0" layoutY="268.0" mnemonicParsing="false" onAction="#confirm1ButtonOnAction" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: linear-gradient(#ffe2d1,#ed6969 ); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Request" textAlignment="CENTER">
+                            <font>
+                                <Font name="Segoe UI Semilight" size="14.0" />
+                            </font>
+                        </Button>
+                        <Label alignment="CENTER" layoutX="130.0" layoutY="98.0" text="Enter Quantity " textFill="#a80000">
+                            <font>
+                                <Font name="Segoe UI Semilight" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="quantityTextField1" layoutX="130.0" layoutY="118.0" prefHeight="26.0" prefWidth="234.0" promptText="No. of bottles" />
+                        <Label fx:id="messageLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="130.0" layoutY="222.0" prefHeight="18.0" prefWidth="234.0" textFill="#d90000" />
+                        <Label layoutX="168.0" layoutY="49.0" text="Schedule Your Blood Request" textFill="RED" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="ViewRequestsAnchor" prefHeight="200.0" prefWidth="200.0" visible="false">
+                    <children>
+                        <Label alignment="CENTER" layoutX="181.0" layoutY="36.0" text="View All Requests" textFill="#a80000">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="18.0" />
+                            </font>
+                        </Label>
+                        <TableView fx:id="viewRequestTable" layoutX="88.0" layoutY="82.0" prefHeight="236.0" prefWidth="328.0">
+                            <columns>
+                                <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Date" />
+                                <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Quantity" />
+                                <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Status" />
+                                <TableColumn fx:id="bloodGroupColumn" prefWidth="85.60000610351562" text="Blood Group" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="UrgentRequestAnchor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: snow;" visible="false">
+                    <children>
+                        <TextField fx:id="quantityTextField" layoutX="136.0" layoutY="164.0" prefHeight="26.0" prefWidth="234.0" promptText="No. of bottles" />
+                        <Label layoutX="195.0" layoutY="58.0" text="Urgent Blood Request" textFill="RED" />
+                        <Label alignment="CENTER" layoutX="135.0" layoutY="137.0" text="Enter Quantity " textFill="#a80000">
+                            <font>
+                                <Font name="Segoe UI Semilight" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="158.0" layoutY="23.0" prefHeight="35.0" prefWidth="190.0" text="Blood Request" textFill="#a80000">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="confirmButton" layoutX="183.0" layoutY="234.0" mnemonicParsing="false" onAction="#confirmButtonOnAction" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: linear-gradient(#ffe2d1,#ed6969 ); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Urgent Request" textAlignment="CENTER">
+                            <font>
+                                <Font name="Segoe UI Semilight" size="14.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="messageLabel" alignment="CENTER" layoutX="136.0" layoutY="201.0" prefHeight="18.0" prefWidth="235.0" textFill="#d10202">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </right>
+    <center>
+        <Label text="Label" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>
